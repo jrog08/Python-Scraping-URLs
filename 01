@@ -1,0 +1,36 @@
+
+pip install requests #Install requests
+
+pip install BeatifulSoup #Install BeautfulSoup
+
+python #Work in Python
+
+import requests #Run HTML flyby
+
+from bs4 import BeautifulSoup, SoupStrainer #Import methods from bs4 package
+
+import bs4, csv #Import csv to be able to export to .csv
+ 
+search_link = "https://www.census.gov/programs-surveys/popest.html" #Set search link
+
+r = requests.get(search_link) #Create file handle and request get method
+
+raw_html = r.text #Use text feature
+
+soup = BeautifulSoup(raw_html, 'html.parser') #Set variable for BeautifulSoup and parse text
+
+all_links = soup.find_all("a") #Set new variable and seach "a" tags (or other tags)
+
+print ("Number of URLs before processing: ") #Describe the # to be printed below
+
+print (len(all_links)) #Prints # of all links
+
+unique = set() #create an empty set to discriminate URLS
+
+#Create a for loop
+
+#Create an IF... elif.... Else statement to filter to do the filtering
+
+#Open a csv to write elements into
+
+#Close the file
